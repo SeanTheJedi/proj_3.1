@@ -63,20 +63,20 @@ Name: Bob Smith
 
 ## 🚀 Using the App
 
--After logging in, you'll be taken to the Available Books page
+- After logging in, you'll be taken to the Available Books page
 
--Click Borrow to borrow a book (it will become unavailable to other users)
+- Click Borrow to borrow a book (it will become unavailable to other users)
 
--Go to My Profile to:
+- Go to My Profile to:
 
-See your personal details
+   - See your personal details
+   
+   - View borrowed books
+   
+   - Return books
+   
+   - Logout
 
-View borrowed books
+- Click Logout in the navigation bar to end your session
 
-Return books
-
-Logout
-
-Click Logout in the navigation bar to end your session
-
-This will clear your login session but book availability will remain the same until returned
+- This will clear your login session but book availability will remain the same until returned
