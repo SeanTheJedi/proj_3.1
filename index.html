@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Library App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>📚 Simple Library</h1>
+</header>
+
+<nav class="hidden" id="navBar">
+    <a href="#" onclick="showPage('booksPage')">Available Books</a>
+    <a href="#" onclick="showPage('profilePage')">My Profile</a>
+    <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<main id="loginPage">
+    <h2>Library Login</h2>
+    <form id="loginForm">
+        <label for="cardNumber">Library Card Number:</label>
+        <input type="text" id="cardNumber" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+    <p id="loginError" class="error hidden">Invalid credentials. Please try again.</p>
+</main>
+
+<main id="booksPage" class="hidden">
+    <h2>Available Books</h2>
+    <div class="book-list" id="booksList"></div>
+</main>
+
+<main id="profilePage" class="hidden">
+    <h2>My Profile</h2>
+    <div id="userDetails"></div>
+    <h3>Borrowed Books</h3>
+    <div id="borrowedList"></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
