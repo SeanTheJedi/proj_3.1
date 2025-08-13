@@ -39,18 +39,18 @@ It allows users to:
    git clone https://github.com/your-username/library-app.git
    cd library-app
 
-Open the App in a Browser
+2. **Open the App in a Browser**
 
-Locate the index.html file
-
-Double-click it OR right-click and choose "Open with" → Your Browser
-
-The app will load in your browser
-
-Login with a Test Account
+   -Locate the index.html file
+   
+   -Double-click it OR right-click and choose "Open with" → Your Browser
+   
+   -The app will load in your browser
+   
+   -Login with a Test Account
 
 The app has pre-generated users stored in script.js:
-
+```
 Card Number: 12345
 Password: password123
 Name: Alice Johnson
@@ -58,15 +58,16 @@ Name: Alice Johnson
 Card Number: 67890
 Password: securepass
 Name: Bob Smith
+```
 
 
-Using the App
+## 🚀 Using the App
 
-After logging in, you'll be taken to the Available Books page
+-After logging in, you'll be taken to the Available Books page
 
-Click Borrow to borrow a book (it will become unavailable to other users)
+-Click Borrow to borrow a book (it will become unavailable to other users)
 
-Go to My Profile to:
+-Go to My Profile to:
 
 See your personal details
 
