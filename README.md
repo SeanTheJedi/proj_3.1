@@ -14,12 +14,15 @@ It allows users to:
 ---
 
 ## 📂 Project Structure
+```plaintext
+library-app/
 │
-├── index.html # Main HTML file
-├── styles.css # Styles for the app
-├── script.js # App functionality (JavaScript)
-└── PROMPTS-LOG.md # Instructions (this file)
-└── README.md # Instructions (this file)
+├── index.html       # Main HTML file
+├── styles.css       # Styles for the app
+├── script.js        # JavaScript functionality
+└── PROMPTS-LOG.md        # Instructions for running the app
+└── README.md        # Instructions for running the app
+```
 
 
 ---
