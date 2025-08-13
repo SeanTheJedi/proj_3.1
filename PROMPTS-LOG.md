@@ -214,10 +214,213 @@ HTML File
 </body>
 </html>
 
+```
+How it works:
+
+Login — User enters a username (no password for simplicity).
+
+Books Page — Shows a grid of available books with a Borrow button.
+
+Borrowing — Disables the button and moves the book to the user’s profile list.
+
+Profile Page — Lists all borrowed books.
+
+Logout — Resets state and returns to login.
+
+The styling is intentionally clean and minimal so you can expand it easily.
+
+If you want, I can add localStorage so the borrowed books and login persist even after refreshing the page. That would make it feel more like a real mini-app. Would you like me to do that next?
 
 
-``` 
+Prompt 2: For more clarity separate the HTML, CSS and JavaScript into different files.
+Response 2:
+HTML
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Library App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<header>
+    <h1>📚 Simple Library</h1>
+</header>
 
+<nav class="hidden" id="navBar">
+    <a href="#" onclick="showPage('booksPage')">Available Books</a>
+    <a href="#" onclick="showPage('profilePage')">My Profile</a>
+    <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<main id="loginPage">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <button type="submit">Login</button>
+    </form>
+</main>
+
+<main id="booksPage" class="hidden">
+    <h2>Available Books</h2>
+    <div class="book-list" id="booksList"></div>
+</main>
+
+<main id="profilePage" class="hidden">
+    <h2>My Borrowed Books</h2>
+    <div id="borrowedList"></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+```
+
+CSS
+
+```
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+nav {
+    background: #444;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.book {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: #fafafa;
+}
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+}
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+.hidden {
+    display: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+```
+
+JavaScript
+```
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+nav {
+    background: #444;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.book {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: #fafafa;
+}
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+}
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+.hidden {
+    display: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+```
+
+Prompt 3:
 
 
