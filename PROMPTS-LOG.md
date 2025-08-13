@@ -1,6 +1,8 @@
 # proj_3.1
 A library web app
 
+LLM: Chat-GPT-5
+
 Prompts
 
 Prompt 1: 
