@@ -20,7 +20,7 @@ library-app/
 ├── index.html       # Main HTML file
 ├── styles.css       # Styles for the app
 ├── script.js        # JavaScript functionality
-└── PROMPTS-LOG.md        # Instructions for running the app
+└── PROMPTS-LOG.md   # Record of prompts used to generate the app
 └── README.md        # Instructions for running the app
 ```
 
